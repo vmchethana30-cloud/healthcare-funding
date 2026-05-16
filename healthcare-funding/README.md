@@ -43,33 +43,7 @@ healthcare-funding/
     ├── chart_nfa_utilisation.png
     ├── chart_indigenous_funding.png
     ├── chart_consolidated_dashboard.png
-    ├── powerbi_abf_fact.csv
-    ├── powerbi_osr_fact.csv
-    ├── powerbi_nfa_fact.csv
-    ├── powerbi_funding_summary.csv
-    ├── powerbi_abf_variance.csv
-    ├── powerbi_nfa_utilisation.csv
-    └── powerbi_osr_categories.csv
-```
-
 ---
-
-## How to Run
-
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
-
-# Generate datasets first
-cd src
-python generate_data.py
-
-# Open notebook
-cd ..
-jupyter notebook notebooks/Healthcare_Funding_Analysis.ipynb
-```
-
-Run all cells — charts and Power BI exports are saved automatically to `outputs/`.
-
 ---
 
 ## Analysis Sections
@@ -82,7 +56,6 @@ Run all cells — charts and Power BI exports are saved automatically to `output
 | 4 | NFA — Commonwealth/State split, stream utilisation, Indigenous health |
 | 5 | Consolidated dashboard — all streams combined |
 | 6 | Key findings summary |
-| 7 | Power BI exports (7 tables) |
 
 ---
 
@@ -97,13 +70,3 @@ Run all cells — charts and Power BI exports are saved automatically to `output
 
 ---
 
-## Power BI Dashboard Guide
-
-Import all `powerbi_*.csv` files and build:
-- **KPI Cards** — Total ABF, OSR, NFA funding for selected year/HHS
-- **Stacked Bar** — Funding mix by HHS (ABF/OSR/NFA)
-- **Line Chart** — Funding trend 2019–2024 with COVID annotation
-- **Matrix** — ABF cost variance by HHS × Care Type
-- **Bar Chart** — NFA utilisation rate by funding stream
-- **Donut** — OSR category breakdown
-- **Slicer** — Year, HHS, Care Type, Funding Stream
